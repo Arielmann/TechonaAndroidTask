@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/companyViewLayout"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000">
+
+    <Button
+        android:id="@+id/companyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/md_white_1000"
+        android:text="Button"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/companyTV"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Apple"
+        android:textColor="@color/md_black_1000"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
