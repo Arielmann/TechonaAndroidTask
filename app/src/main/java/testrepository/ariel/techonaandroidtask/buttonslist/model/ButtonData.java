@@ -5,6 +5,7 @@ import java.util.UUID;
 public class ButtonData {
 
     private String id;
+    private final int spaceHeight;
     private String companyTitle;
     private int buttonLeftMargin;
     private int buttonRightMargin;
@@ -51,7 +52,11 @@ public class ButtonData {
         return tvRightMargin;
     }
 
-    public static class Builder {
+    public int getSpaceHeight() {
+        return spaceHeight;
+    }
+
+    static class Builder {
         // Required parameters
         private final String companyTitle;
 
@@ -64,9 +69,10 @@ public class ButtonData {
         private int tvRightMargin;
         private int tvTopMargin;
         private int tvBottomMargin;
+        private int spaceHeight;
 
-        public Builder(String companytitle) {
-            this.companyTitle = companytitle;
+        public Builder(String companyTitle) {
+            this.companyTitle = companyTitle;
         }
 
         public Builder buttonLeftMargin(int val) {
@@ -113,6 +119,11 @@ public class ButtonData {
         public ButtonData build() {
             return new ButtonData(this);
         }
+
+        public Builder spaceHeight(int val) {
+            spaceHeight = val;
+            return this;
+        }
     }
 
     private ButtonData(Builder builder) {
@@ -126,5 +137,6 @@ public class ButtonData {
         tvRightMargin = builder.tvRightMargin;
         tvTopMargin = builder.tvTopMargin;
         tvBottomMargin = builder.tvBottomMargin;
+        spaceHeight = builder.spaceHeight;
     }
 }

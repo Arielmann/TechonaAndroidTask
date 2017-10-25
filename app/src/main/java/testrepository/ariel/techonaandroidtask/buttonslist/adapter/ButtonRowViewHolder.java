@@ -29,7 +29,7 @@ class ButtonRowViewHolder extends GenericViewHolder implements View.OnClickListe
         this.listener = listener;
     }
 
-    View.OnClickListener onCompanyButtonClicked = new View.OnClickListener() {
+   private View.OnClickListener onCompanyButtonClicked = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             int position = getLayoutPosition();
@@ -41,6 +41,7 @@ class ButtonRowViewHolder extends GenericViewHolder implements View.OnClickListe
         final String title = dataSet.get(position).getCompanyTitle();
         final Button companyButton = (Button) itemView.findViewById(R.id.companyButton);
         final TextView companyTitleTV = (TextView) itemView.findViewById(R.id.companyTV);
+        final View spaceView = itemView.findViewById(R.id.space);
         companyTitleTV.setText(title);
 
         RelativeLayout.LayoutParams buttonLayoutParams = new RelativeLayout.LayoutParams(companyButton.getLayoutParams().height, companyButton.getLayoutParams().width);

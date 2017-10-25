@@ -22,16 +22,18 @@ public class ButtonListModel {
 
     private List<ButtonData> initDataSet() {
         dataSet.add(new ButtonData.Builder("Apple").buttonLeftMargin(0)
-                .buttonRightMargin(250).buttonTopMargin(200).buttonBottomMargin(0)
-                .tvLeftMargin(0).tvRightMargin(245).tvTopMargin(0).tvBottomMargin(0).build());
+                .buttonRightMargin(275).buttonTopMargin(200).buttonBottomMargin(0)
+                .tvLeftMargin(0).tvRightMargin(275).tvTopMargin(0).tvBottomMargin(0).spaceHeight(150).build());
 
         dataSet.add(new ButtonData.Builder("yahoo").buttonLeftMargin(0)
                 .buttonRightMargin(450).buttonTopMargin(0).buttonBottomMargin(0)
-                .tvLeftMargin(0).tvRightMargin(145).tvTopMargin(0).tvBottomMargin(0).build());
+                .tvLeftMargin(0).tvRightMargin(145).tvTopMargin(0).tvBottomMargin(0)
+                .spaceHeight(100).build());
 
         dataSet.add(new ButtonData.Builder("Google").buttonLeftMargin(0)
                 .buttonRightMargin(145).buttonTopMargin(0).buttonBottomMargin(0)
-                .tvLeftMargin(0).tvRightMargin(450).tvTopMargin(0).tvBottomMargin(0).build());
+                .tvLeftMargin(0).tvRightMargin(450).tvTopMargin(0).tvBottomMargin(0)
+                        .spaceHeight(50).build());
        // dataSet.add(new ButtonData.Builder("yahoo").buttonXLeftMargin(-100).buttonYPos(50).tvXPod(200).tvYPos(50).build());
         //dataSet.add(new ButtonData.Builder("Google").buttonXLeftMargin(250).buttonYPos(50).tvXPod(-100).tvYPos(50).build());
         return dataSet;

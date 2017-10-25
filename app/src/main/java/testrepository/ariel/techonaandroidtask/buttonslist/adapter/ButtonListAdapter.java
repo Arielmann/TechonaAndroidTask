@@ -1,6 +1,5 @@
 package testrepository.ariel.techonaandroidtask.buttonslist.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +31,6 @@ public class ButtonListAdapter extends RecyclerView.Adapter<GenericViewHolder> {
 
     @Override
     public void onBindViewHolder(GenericViewHolder holder, int position) {
-        holder.itemView.setOnClickListener((View.OnClickListener) holder);
         holder.setUIDataOnView(position);
     }
 
