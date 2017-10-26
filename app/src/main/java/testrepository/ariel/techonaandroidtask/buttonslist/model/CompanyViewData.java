@@ -2,11 +2,11 @@ package testrepository.ariel.techonaandroidtask.buttonslist.model;
 
 import java.util.UUID;
 
-public class ButtonData {
+public class CompanyViewData {
 
     private String id;
     private final int spaceHeight;
-    private String companyTitle;
+    private String tvTitle;
     private int buttonLeftMargin;
     private int buttonRightMargin;
     private int buttonTopMargin;
@@ -16,8 +16,8 @@ public class ButtonData {
     private int tvTopMargin;
     private int tvBottomMargin;
 
-    public String getCompanyTitle() {
-        return companyTitle;
+    public String getTvTitle() {
+        return tvTitle;
     }
 
     public int getButtonLeftMargin() {
@@ -56,7 +56,7 @@ public class ButtonData {
         return spaceHeight;
     }
 
-    static class Builder {
+    public static class Builder {
         // Required parameters
         private final String companyTitle;
 
@@ -115,9 +115,8 @@ public class ButtonData {
             return this;
         }
 
-
-        public ButtonData build() {
-            return new ButtonData(this);
+        public CompanyViewData build() {
+            return new CompanyViewData(this);
         }
 
         public Builder spaceHeight(int val) {
@@ -126,9 +125,9 @@ public class ButtonData {
         }
     }
 
-    private ButtonData(Builder builder) {
+    private CompanyViewData(Builder builder) {
         id = UUID.randomUUID().toString();
-        companyTitle = builder.companyTitle;
+        tvTitle = builder.companyTitle;
         buttonLeftMargin = builder.buttonLeftMargin;
         buttonRightMargin = builder.buttonRightMargin;
         buttonTopMargin = builder.buttonTopMargin;
